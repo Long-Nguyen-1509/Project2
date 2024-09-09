@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../output.css" />
+    <script src="import.js"></script>
+    <script src="../components/load-header.js"></script>
+  </head>
+  <body>
+    <div id="full-page" class="flex h-screen w-screen flex-col">
+      <div id="header" class="h-1/5"></div>
+      <div id="body" class="mx-14 my-4 flex flex-grow space-x-2">
+        <div class="flex w-1/6 flex-col justify-start space-y-1 rounded">
+          <button
+            type="menu"
+            id="toggleButton1"
+            class="box-content rounded border border-blue-700 bg-blue-700 px-4 py-2 hover:bg-blue-700"
+          >
+            Danh sách thi
+          </button>
+          <button
+            type="menu"
+            id="toggleButton2"
+            class="box-content rounded border border-blue-700 px-4 py-2 hover:bg-blue-700"
+          >
+            Thông tin thêm
+          </button>
+          <button
+            id="download"
+            class="box-content rounded border border-solid border-gray-300 bg-gray-100 px-4 py-2 hover:bg-gray-300"
+          >
+            Download danh sách thi tổng
+          </button>
+        </div>
+        <div
+          class="relative flex-grow rounded border border-solid border-black p-4 shadow-md shadow-gray-500 drop-shadow-md"
+        >
+          <div
+            id="contentDiv1"
+            class="absolute bottom-0 left-0 right-0 top-0 p-4"
+          >
+            <div class="relative flex h-full w-full flex-col space-y-2">
+              <h2>
+                Upload danh sách thi theo file theo mẫu. Tải file mẫu tại đường
+                <a href="/1.xlsx" download class="text-blue-600 underline"
+                  >link</a
+                >
+              </h2>
+
+              <div
+                id="fileDropArea1"
+                class="flex-grow border-2 border-dashed border-gray-300 p-4 text-center"
+              >
+                <label for="fileInput">Drag and drop a file here or</label>
+                <input
+                  type="file"
+                  id="fileInput1"
+                  name="fileInput"
+                  style="display: none"
+                />
+                <button
+                  type="button"
+                  id="chooseFileButton1"
+                  class="rounded border border-blue-500 text-blue-500"
+                >
+                  Choose File
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="contentDiv2"
+            class="absolute bottom-0 left-0 right-0 top-0 hidden p-4"
+          >
+            <div class="relative flex h-full w-full flex-col space-y-2">
+              <h2>
+                Upload thông tin thêm theo mẫu. Tải file mẫu tại đường
+                <a href="/2.xlsx" download class="text-blue-600 underline"
+                  >link</a
+                >
+              </h2>
+
+              <div
+                id="fileDropArea2"
+                class="flex-grow border-2 border-dashed border-gray-300 p-4 text-center"
+              >
+                <label for="fileInput">Drag and drop a file here or</label>
+                <input
+                  type="file"
+                  id="fileInput2"
+                  name="fileInput"
+                  style="display: none"
+                />
+                <button
+                  type="button"
+                  id="chooseFileButton2"
+                  class="rounded border border-blue-500 text-blue-500"
+                >
+                  Choose File
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

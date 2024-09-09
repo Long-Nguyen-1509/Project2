@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sinh vien home</title>
+    <link rel="stylesheet" href="home.css" />
+    <script src="home.js"></script>
+    <script src="download.js"></script>
+    <script src="../components/logout.js"></script>
+  </head>
+  <body>
+    <div id="full-page">
+      <div id="header-panel">
+        <div id="header-container">
+          <div id="page-section" class="header-container__item">
+            <a
+              href="http://127.0.0.1:5500/sinh-vien/student-home.html"
+              class="page-section__item"
+            >
+              <img
+                src="../images/347519313-1553408625211-logo_hust.jpg"
+                alt="my"
+                style="width: 55px"
+              />
+            </a>
+            <div id="name" class="page-section__item">
+              <div id="page-name" class="name__item">
+                Trang thông tin quản lí lịch thi
+              </div>
+              <div id="school-name" class="name__item">
+                Đại học bách khoa Hà Nội - Trường công nghệ thông tin và truyền
+                thông
+              </div>
+            </div>
+          </div>
+          <div id="account-section" class="header-container__item">
+            <button id="logout-button" class="button">Logout</button>
+          </div>
+        </div>
+      </div>
+      <div id="main-panel">
+        <div id="first-box" class="main-panel__item">
+          <div id="details" class="first-box__item">
+            <h2 class="details__item">Thông tin sinh viên</h2>
+            <div id="details-list-container" class="details__item">
+              <ul id="details-list" class="details-list-container__item">
+                <li id="name" class="details-list__item">Tên</li>
+                <li id="id" class="details-list__item">MSSV</li>
+                <li id="birth" class="details-list__item">Ngày sinh</li>
+                <li id="sex" class="details-list__item">Giới tính</li>
+                <li id="email" class="details-list__item">Email</li>
+                <li id="class" class="details-list__item">Lớp sinh viên</li>
+              </ul>
+              <ul id="details-list-data" class="details-list-container__item">
+                <li id="name-data" class="details-list-data__item"></li>
+                <li id="id-data" class="details-list-data__item"></li>
+                <li id="birth-data" class="details-list-data__item"></li>
+                <li id="sex-data" class="details-list-data__item"></li>
+                <li id="email-data" class="details-list-data__item"></li>
+                <li id="class-data" class="details-list-data__item"></li>
+              </ul>
+            </div>
+          </div>
+          <div id="download-button-container" class="first-box__item">
+            <button id="download-button" class="button">
+              <b> Tải về thông tin lớp thi </b>
+            </button>
+          </div>
+        </div>
+        <div id="second-box" class="main-panel__item">
+          <h2 class="header">Danh sách lớp thi của sinh viên</h2>
+          <div class="table-container">
+            <table id="data-table" style="width: 100%; table-layout: fixed">
+              <colgroup>
+                <col style="width: 15px" />
+                <col style="width: 100px" />
+                <col style="width: 50px" />
+                <col style="width: 100px" />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+                <col style="width: 50px" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>STT</th>
+                  <th>Học phần</th>
+                  <th>Mã lớp thi</th>
+                  <th>Khóa học</th>
+                  <th>Ngày thi</th>
+                  <th>Kíp thi</th>
+                  <th>Phòng thi</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

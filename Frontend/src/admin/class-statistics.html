@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../output.css" />
+    <script src="./class-statistics.js"></script>
+    <script src="../components/load-header.js"></script>
+  </head>
+  <body>
+    <div class="flex h-screen w-screen flex-col">
+      <div id="header" class="h-1/5"></div>
+      <div
+        class="relative mx-14 my-4 flex grow items-center justify-center space-x-4"
+      >
+        <div
+          class="flex h-full w-1/4 flex-col rounded border-2 border-solid border-black p-4 shadow-md shadow-gray-500"
+        >
+          <div class="flex flex-1 flex-col items-center justify-evenly">
+            <h2 class="text-center text-xl font-bold">
+              Thống kê danh sách lớp thi
+            </h2>
+            <div class="flex items-center">
+              <label for="dropdown" class="mr-4">Chọn ngày:</label>
+              <select
+                id="dropdown"
+                class="rounded-md border border-gray-300 bg-gray-100 px-4 py-2"
+              ></select>
+            </div>
+            <button
+              id="submit"
+              class="rounded-md border border-gray-300 bg-gray-100 px-4 py-2 hover:bg-gray-300"
+            >
+              Kết quả
+            </button>
+          </div>
+          <div class="flex flex-1 items-center justify-center">
+            <button
+              id="download"
+              class="rounded border-2 border-solid border-gray-300 bg-gray-100 p-2 hover:bg-gray-300"
+            >
+              Download
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative flex h-full grow flex-col items-center justify-center rounded border-2 border-solid border-black p-4 shadow-md shadow-gray-500"
+        >
+          <div
+            id="dataDiv"
+            class="max-h-[500px] w-full grow overflow-y-auto"
+          ></div>
+          <style>
+            td,
+            tr {
+              text-align: center;
+              vertical-align: middle;
+              border: 1px solid black;
+              padding: 8px 16px;
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

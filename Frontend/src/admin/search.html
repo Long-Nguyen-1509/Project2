@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tìm kiếm</title>
+    <link rel="stylesheet" href="../../output.css" />
+    <script src="search.js"></script>
+    <script src="../components/load-header.js"></script>
+  </head>
+  <body>
+    <div id="full-page" class="flex h-screen w-screen flex-col">
+      <div id="header" class="h-1/5"></div>
+      <div
+        id="body"
+        class="mx-14 my-4 flex grow flex-col items-center space-y-2 rounded border-2 border-solid border-black p-4 shadow-md shadow-gray-500"
+      >
+        <div class="flex w-full justify-start">
+          <form
+            id="searchForm"
+            class="relative flex w-full items-center justify-start space-x-[2px]"
+          >
+            <input
+              type="text"
+              name="idLopThi"
+              id="idLopThi"
+              class="w-[104px] rounded border border-solid border-blue-500 p-1"
+            />
+            <input
+              type="text"
+              name="idLopHoc"
+              id="idLopHoc"
+              class="w-[104px] rounded border border-solid border-blue-500 p-1"
+            />
+            <input
+              type="text"
+              name="idHocPhan"
+              id="idHocPhan"
+              class="w-[117px] rounded border border-solid border-blue-500 p-1"
+            />
+            <input
+              type="text"
+              name="tenHocPhan"
+              id="tenHocPhan"
+              F
+              class="w-[261px] rounded border border-solid border-blue-500 p-1"
+            />
+            <button
+              type="submit"
+              class="w-20 rounded border border-solid border-black bg-blue-500 p-1 text-white hover:bg-blue-700"
+            >
+              Search
+            </button>
+            <label for="page">Trang:</label>
+            <input
+              type="text"
+              name="page"
+              id="page"
+              class="w-fit text-blue-500"
+              readonly
+            />
+          </form>
+          <div class="flex space-x-2">
+            <button
+              type="button"
+              id="prevPage"
+              class="rounded border border-solid border-black bg-blue-500 p-1 text-white hover:bg-blue-700"
+            >
+              prev
+            </button>
+            <button
+              type="button"
+              id="nextPage"
+              class="ml-2 rounded border border-solid border-black bg-blue-500 p-1 text-white hover:bg-blue-700"
+            >
+              next
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative max-h-[478px] w-full grow border-collapse overflow-y-auto border-2 border-solid border-gray-500"
+        >
+          <table
+            id="data-table"
+            class="w-full border-2 border-solid border-gray-500 text-left"
+          >
+            <colgroup>
+              <col class="w-[100%/15]" />
+
+              <col class="w-[100%/15]" />
+
+              <col class="w-[100%/15]" />
+
+              <col class="w-1/5" />
+
+              <col class="w-[100%/15]" />
+
+              <col class="w-1/5" />
+
+              <col class="w-1/5" />
+
+              <col class="w-[100%/15]" />
+
+              <col class="w-[100%/15]" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Mã lớp thi</th>
+
+                <th>Mã lớp học</th>
+
+                <th>Mã học phần</th>
+
+                <th>Tên học phần</th>
+
+                <th>Kì học</th>
+
+                <th>Khóa học</th>
+
+                <th>Nhóm thi</th>
+
+                <th>Ngày thi</th>
+
+                <th>Số SV</th>
+              </tr>
+            </thead>
+            <tbody id="dataBody"></tbody>
+          </table>
+          <style>
+            #data-table thead th {
+              border-left: 2px solid gray;
+              border-right: 2px solid gray;
+              border-bottom: 2px solid gray;
+              padding: 4px;
+              height: 50px;
+            }
+            #data-table tbody tr {
+              border-bottom: 1px solid skyblue;
+              padding: 4px;
+              height: 50px;
+            }
+            #data-table tbody tr:hover {
+              background-color: lightgray;
+            }
+
+            /* tbody:nth-child(odd) {
+            background-color: blue;
+          }
+          tbody:nth-child(even) {
+            background-color: white;
+          } */
+          </style>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../output.css" />
+    <script src="details.js"></script>
+    <script src="../components/load-header.js"></script>
+  </head>
+  <body>
+    <div class="flex h-screen w-screen flex-col">
+      <div id="header" class="h-1/5"></div>
+      <div
+        class="relative mx-14 my-4 flex grow items-center justify-center space-x-4"
+      >
+        <div
+          class="relative flex h-full w-2/5 flex-col rounded border-2 border-solid border-black p-4 shadow-md"
+        >
+          <div
+            class="relative flex h-1/2 w-full flex-col items-center justify-around space-y-6 px-2"
+          >
+            <h2 class="text-xl font-bold">Thông tin lớp thi</h2>
+            <div class="flex w-full justify-center">
+              <ul class="w-28">
+                <li>Mã lớp thi:</li>
+                <li>Mã lớp học:</li>
+                <li>Mã học phần:</li>
+                <li>Tên học phần:</li>
+                <li>Nhóm thi:</li>
+                <li>Kì học:</li>
+                <li>Khóa học:</li>
+                <li>Ngày thi:</li>
+              </ul>
+              <ul id="detailsList"></ul>
+            </div>
+          </div>
+          <div class="relative flex w-full grow items-center justify-center">
+            <button
+              id="download"
+              class="rounded border-2 border-solid border-gray-300 bg-gray-100 p-2 hover:bg-gray-300"
+            >
+              Download danh sách thi
+            </button>
+          </div>
+        </div>
+        <div
+          class="relative flex h-full grow flex-col space-y-4 rounded border-2 border-solid border-black p-4 shadow-md"
+        >
+          <div id="buttons" class="flex h-8 w-full space-x-2"></div>
+          <div
+            id="dataContainer"
+            class="relative max-h-[436px] w-full grow overflow-y-auto border-2 border-dashed border-black"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
