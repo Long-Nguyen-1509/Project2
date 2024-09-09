@@ -22,3 +22,8 @@ The key goals of this project are:
 - Exam management:
   - For admin: Import exam list from pre-formatted Excel file, automatically process data to create exam classes and save into database, view exam class details and export.
   - For student: View exam class list and export.
+
+## Demo
+
+- Student demo: https://youtu.be/gSnqhVZMO4Y
+- Admin demo: https://youtu.be/If96mpcAXkE
